@@ -74,7 +74,7 @@ const Planet = (props) => {
   return (
     <div className="card">
       <div>
-        <img src={props.url} alt={props.name}/>
+        <img src={props.url} alt={props.name} />
       </div>
       <h2>{props.name}</h2>
       <p>{props.desc}</p>
@@ -99,8 +99,7 @@ const PlanetList = (props) => {
           moons={planet.moons}
           desc={planet.desc}
           url={planet.url}
-          key={planet.id}
-        />
+          key={planet.id} />
       )}
     </div>
   );
@@ -108,6 +107,6 @@ const PlanetList = (props) => {
 
 // 3: Render the container component to the DOM
 ReactDOM.render(
-  <Planet planets={planets}/>,
-  document.getElementById(root)
+  <PlanetList planets={ planets } />,
+  document.getElementById('root')
 );
